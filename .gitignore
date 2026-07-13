@@ -1,0 +1,13 @@
+# Simulator artifacts
+work/
+transcript
+vsim.wlf
+*.wlf
+csrc/
+*.vcd
+*.fst
+obj_dir/
+*.out
+
+# OS
+.DS_Store
