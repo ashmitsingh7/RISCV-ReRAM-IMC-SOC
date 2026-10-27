@@ -188,6 +188,8 @@ uploaded originals.
 
 ## 4. Completeness & Known Issues
 
+**Last verification attempt: 2026-07-13** (from git log)
+
 ### Solid
 - **`reram_array.sv`** — the MAC engine itself: clean, self-contained, no issues found.
 - **`imc_dma.sv`, `imc_sram.sv`** — straightforward, no issues found.

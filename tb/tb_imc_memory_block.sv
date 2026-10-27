@@ -150,13 +150,12 @@ module tb_imc_memory_block;
         imc_axi.arprot  <= 3'b000;
         imc_axi.rready  <= 1'b1;
 
-        // Wait for AR handshake
-        @(posedge clk);
-        while (!imc_axi.arready) @(posedge clk);
+        // Wait for AR handshake (arvalid && arready)
+        while (!(imc_axi.arvalid && imc_axi.arready)) @(posedge clk);
         imc_axi.arvalid <= 1'b0;
 
-        // Wait for R response
-        while (!imc_axi.rvalid) @(posedge clk);
+        // Wait for R response (rvalid && rready)
+        while (!(imc_axi.rvalid && imc_axi.rready)) @(posedge clk);
         data = imc_axi.rdata;
         imc_axi.rready <= 1'b0;
         @(posedge clk);
