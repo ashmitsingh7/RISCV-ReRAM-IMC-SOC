@@ -41,7 +41,7 @@ module simplemem_axi_adapter #(
 		end
 	end
 
-	assign mem_wready = mem_ready;
+	assign mem_axi.wready = mem_ready;
 	assign mem_wdata = mem_axi.wdata;
 	assign mem_wstrb = mem_axi.wstrb;
 
